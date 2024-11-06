@@ -9,6 +9,9 @@
 
     var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
     var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+    var trustedBackgroundImage = Model?.Value<IPublishedContent>("trustedBackgroundImage")?.Url() ?? "default-signature-url";
+
+
 }
 	
 
@@ -35,8 +38,33 @@
       <p>@Model.Value("aboutText")</p>
       <img src="@signatureImage" alt=""></img>
       <p>@Model.Value("aboutSignature")</p>
+
+        <form method="get" novalidate>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="email" id="email" name="email" placeholder="Email address">
+            <input type="text" id="phone" name="phone" placeholder="Phone">
+            <select name="service" id="service">
+                <option value="1">Financial consulting</option>
+            </select>
+            <button class="btn btn-secondary" type="submit">Submit</button>
+        </form>
     </div>  
 
-  </section> 
+
+  </section>
+
+<!----our-story--->
+<section class="our-story">
+    <div class="container">
+        <div class="our-story-content">
+            <h2>@Model?.Value("trustedSectionHeadline") <span>@Model?.Value("trustedSectionHeadline2")</span></h2>
+            <p>@Model.Value("trustedButtonText")</p>
+            <a class="btn btn-primary" href="#">@Model.Value("trustedButtonUrl")</a>
+        </div>
+        <div class="our-story-img">
+            <img src="@trustedBackgroundImage" alt="People">
+        </div>
+    </div>
+</section>
     
   
