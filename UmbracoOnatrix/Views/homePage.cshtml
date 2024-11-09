@@ -10,12 +10,18 @@
     var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
     var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
     var trustedBackgroundImage = Model?.Value<IPublishedContent>("trustedBackgroundImage")?.Url() ?? "default-signature-url";
+    var succesStoryBackground = Model?.Value<IPublishedContent>("succesStoryBackground")?.Url() ?? "default-signature-url";
 
+
+    var ourProjectImage1 = Model?.Value<IPublishedContent>("ourProjectImage1")?.Url() ?? "default-signature-url";
+    var ourProjectImage2 = Model?.Value<IPublishedContent>("ourProjectImage2")?.Url() ?? "default-signature-url";
+    var ourProjectImage3 = Model?.Value<IPublishedContent>("ourProjectImage3")?.Url() ?? "default-signature-url";
+    var ourProjectImage4 = Model?.Value<IPublishedContent>("ourProjectImage4")?.Url() ?? "default-signature-url";
 
 }
 	
 
-
+<!----hero section --->
  <section id="hero-section"> 
     <img src="@backgroundImage" alt="Tina Fox, CEO & Founder"></img>
     <div class="container page-section">
@@ -27,9 +33,9 @@
 
     </div>
   </section>
-  
 
 
+<!----about-us--->
   <section id="about-us-section" class="container page-section"> 
     <div class="container-content">
       <h3 class="section-title">@Model.Value("aboutSectionTitle")</h3>
@@ -66,5 +72,74 @@
         </div>
     </div>
 </section>
+
+<!----success-story--->
+<section class="success-stories bg-primary">
+    <div class="container">
+        <div class="success-stories-content">
+            <h6>@Model.Value("successStoryHeadline")</h6>
+            <h2>@Model.Value("successStoryTitle")</h2>
+            <div class="grid">
+                <div class="grid-container">
+                    <p><span>689</span>More than 100 customers has been served</p>
+                </div>
+                <div class="grid-container">
+                    <p><span>370</span>More than 370 projects has been completed</p>
+                </div>
+                <div class="grid-container">
+                    <p><span>125</span>More than 125 branches has been established in Europe and America</p>
+                </div>
+            </div>
+        </div>
+        <div class="success-stories-img">
+            <img src="@succesStoryBackground" alt="People at table">
+        </div>
+    </div>
+</section>
+
+
+<!----our-project--->
+<section class="our-projects">
+    <div class="container">
+        <h6>OUR PROJECTS</h6>
+        <h2>Recent projects</h2>
+    </div>
+    <div class="grid">
+        <a class="grid-container" href="/our-projects/annual-report/">
+            <img src="@ourProjectImage1" alt="Annual report">
+            <div class="project-content bg-primary">
+                <h6>Annual Report for Juva Inc.</h6>
+                <p>Financial services</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+        <a class="grid-container" href="/our-projects/annual-report/">
+            <img src="@ourProjectImage2" alt="Annual report">
+            <div class="project-content bg-primary">
+                <h6>Business Insights for SP Group Inc.</h6>
+                <p>Financial services</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+        <a class="grid-container" href="/our-projects/annual-report/">
+            <img src="@ourProjectImage3" alt="Annual report">
+            <div class="project-content bg-primary">
+                <h6>Financial Advisors to Irra Corp Inc.</h6>
+                <p>Financial services</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+        <a class="grid-container" href="/our-projects/annual-report/">
+            <img src="@ourProjectImage4" alt="Annual report">
+            <div class="project-content bg-primary">
+                <h6>Budget Planning for Buccura Inc.</h6>
+                <p>Financial services</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+    </div>
+</section>
+
+
     
   

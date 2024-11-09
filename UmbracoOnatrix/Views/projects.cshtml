@@ -3,17 +3,17 @@
 @{
 	Layout = "mainLayout.cshtml";
 
-	  var projectsAnnualImage = Model?.Value<IPublishedContent>("projectsAnnualImage")?.Url() ?? "default-image-url";
-  var projectsBusinessImage = Model?.Value<IPublishedContent>("projectsBusinessImage")?.Url() ?? "default-image-url";
-  var projectsFinancialImage = Model?.Value<IPublishedContent>("projectsFinancialImage")?.Url() ?? "default-image-url";
-  var projectsBudgetImage = Model?.Value<IPublishedContent>("projectsBudgetImage")?.Url() ?? "default-image-url";
+  var projectsImage = Model?.Value<IPublishedContent>("projectsImage")?.Url() ?? "default-image-url";
+  var projectImage1 = Model?.Value<IPublishedContent>("projectImage1")?.Url() ?? "default-image-url";
+  var projectImage2 = Model?.Value<IPublishedContent>("projectImage2")?.Url() ?? "default-image-url";
+  var projectImage3 = Model?.Value<IPublishedContent>("projectImage3")?.Url() ?? "default-image-url";
 }
 
 
 
 
 
-
+@Model.Value("aboutSectionTitle")
 
 
 
@@ -23,48 +23,48 @@
     <div class="container">
         <div class="projects-list">
             <div class="project-container">
-                <img src="@projectsAnnualImage" alt="Meeting">
+                <img src="@projectsImage" alt="Meeting">
                 <div class="project-content">
-                    <h5>Annual Report for Juva Inc.</h5>
+                    <h5>@Model.Value("projectTitle")</h5>
                     <div class="date">
                         <i class="fa-regular fa-calendar-days"></i>
-                        <p>June 15, 2024</p>
+                        <p>@Model.Value("projectDate")</p>
                     </div>
                     <p class="project-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error.</p>
                     <a href="/our-projects/annual-report/">Read more <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="project-container">
-                <img src="@projectsBusinessImage" alt="Meeting">
+                <img src="@projectImage1" alt="Meeting">
                 <div class="project-content">
-                    <h5>Annual Report for Juva Inc.</h5>
+                    <h5>@Model.Value("projectTitle1")</h5>
                     <div class="date">
                         <i class="fa-regular fa-calendar-days"></i>
-                        <p>June 15, 2024</p>
+                        <p>@Model.Value("projectDate1")</p>
                     </div>
                     <p class="project-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error.</p>
                     <a href="/our-projects/annual-report/">Read more <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="project-container">
-                <img src="@projectsFinancialImage" alt="Meeting">
+                <img src="@projectImage2" alt="Meeting">
                 <div class="project-content">
-                    <h5>Annual Report for Juva Inc.</h5>
+                    <h5>@Model.Value("projectTitle2")</h5>
                     <div class="date">
                         <i class="fa-regular fa-calendar-days"></i>
-                        <p>June 15, 2024</p>
+                        <p>@Model.Value("projectDate2")</p>
                     </div>
                     <p class="project-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error.</p>
                     <a href="/our-projects/annual-report/">Read more <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="project-container">
-                <img src="@projectsBudgetImage" alt="Meeting">
+                <img src="@projectImage3" alt="Meeting">
                 <div class="project-content">
-                    <h5>Annual Report for Juva Inc.</h5>
+                    <h5>@Model.Value("projectTitle3")</h5>
                     <div class="date">
                         <i class="fa-regular fa-calendar-days"></i>
-                        <p>June 15, 2024</p>
+                        <p>@Model.Value("projectDate3")</p>
                     </div>
                     <p class="project-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error.</p>
                     <a href="/our-projects/annual-report/">Read more <i class="fa-solid fa-arrow-right"></i></a>
@@ -78,7 +78,7 @@
             </div>
         </div>
         <aside class="sidebar">
-            <h5>Tags</h5>
+            <h5>@Model.Value("Tags")</h5>
             <button class="btn tag-btn">Report</button>
             <button class="btn tag-btn">Business plans</button>
             <button class="btn tag-btn">Insights</button>
@@ -88,8 +88,8 @@
             <button class="btn tag-btn">Finance</button>
             <button class="btn tag-btn">Pricing</button>
             <form class="support-box bg-primary" method="get" novalidate>
-                <h5>How can we help you?</h5>
-                <p class="support-text">online support 24/7, we are here to help you</p>
+                <h5>@Model.Value("HelpYou")</h5>
+                <p class="support-text">@Model.Value("HelpYouText")</p>
                 <div class="input-container">
                     <input type="email" id="email" name="email" placeholder="E-mail address">
                     <button class="btn"><i class="fa-regular fa-envelope"></i></button>
