@@ -1,0 +1,26 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var officeLocation = settings?.Value<string>("officeLocation") ?? "";
+}
+
+<div class="menu-bar">
+    <div class="menu container">
+        <a href="/"><img src="/media\tozn4ywf\brand.svg" alt="Logo"></a>
+        <nav id="nav">
+            <a href="/about/">About</a>
+            <a href="/ourServices/">Services</a>
+            <a href="/projects/">Projects</a>
+            <a href="/contactsPage/">Contact</a>
+        </nav>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="menu-btn" onclick="showMenu()">
+                
+            </button>
+    </div>
+</div>
+
+

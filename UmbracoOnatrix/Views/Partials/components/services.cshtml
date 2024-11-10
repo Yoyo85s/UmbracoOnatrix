@@ -1,0 +1,96 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IPublishedContent>
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    //var settings = rootContents.FirstOrDefault(x => x.ContentType.Alias == "settingsPage");
+
+    // Correct the use of .Url() method
+
+    //var riskImage = settings?.Value<IPublishedContent>("riskImage")?.Url() ?? "default-signature-url";
+    //var bondsImage = settings?.Value<IPublishedContent>("bondsImage")?.Url() ?? "default-signature-url";
+    //var assuranceImage = settings?.Value<IPublishedContent>("assuranceImage")?.Url() ?? "default-signature-url";
+    //var taxImage = settings?.Value<IPublishedContent>("taxImage")?.Url() ?? "default-signature-url";
+    //var financialImage = settings?.Value<IPublishedContent>("financialImage")?.Url() ?? "default-signature-url";
+    //var statisticImage = settings?.Value<IPublishedContent>("statisticImage")?.Url() ?? "default-signature-url";
+
+         //<img src="~/media/3jqh3tca/brand1.png" alt="Logo 1">
+}
+
+
+
+<!----solutions-section --->
+<section class="solutions">
+    <div class="container">
+        <h2><span>We Provide The Solutions</span> To Grow Your Business Faster</h2>
+        <div class="grid">
+            <a class="grid-container" href="/our-services/risk-management/">
+                <div class="grid-container-header">
+                    <h5>Risk Management</h5>
+                </div>
+                <img src="~/media/ebxnkbd4/services-5.png" alt="Service Image">
+                <div class="grid-container-text">
+                    <p>
+                        Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    </p>
+                </div>
+            </a>
+            <a class="grid-container" href="/our-services/risk-management/">
+                <div class="grid-container-header">
+                    <h5>Bonds & Commodities</h5>
+                </div>
+                <img src="~/media/yzxn24vf/services-1.png" alt="Risk management">
+                <div class="grid-container-text">
+                    <p>
+                        Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    </p>
+                </div>
+            </a>
+            <a class="grid-container" href="/our-projects/annual-report/">
+                <div class="grid-container-header">
+                    <h5>Assurance & Audits</h5>
+                </div>
+                <img src="~/media/lswpxyef/services-3.png" alt="Risk management">
+                <div class="grid-container-text">
+                    <p>
+                        Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    </p>
+                </div>
+            </a>
+            <a class="grid-container" href="/our-services/risk-management/">
+                <div class="grid-container-header">
+                    <h5>Tax and Trusts</h5>
+                </div>
+                <img src="~/media/suca5ote/services-4.png" alt="Risk management">
+                <div class="grid-container-text">
+                    <p>
+                        Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    </p>
+                </div>
+            </a>
+            <a class="grid-container" href="/our-services/risk-management/">
+                <div class="grid-container-header">
+                    <h5>Financial Advisor</h5>
+                </div>
+                <img src="~/media/qrvpalip/services-6.png" alt="Risk management">
+                <div class="grid-container-text">
+                    <p>
+                        Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    </p>
+                </div>
+            </a>
+            <a class="grid-container" href="/our-services/risk-management/">
+                <div class="grid-container-header">
+                    <h5>Statistic Advisors</h5>
+                </div>
+                <img src="~/media/tjmcb5ge/services-2.png" alt="Risk management">
+                <div class="grid-container-text">
+                    <p>
+                        Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

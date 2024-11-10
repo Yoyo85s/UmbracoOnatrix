@@ -16,7 +16,7 @@
 </section>
 
 <!----our-services // Partial--->			
-
+@await Html.PartialAsync("components/services") 
 
 <div class="pagination">
     <button class="btn prev-next none">Prev</button>
@@ -26,3 +26,4 @@
 </div>
 
 <!----contact-info/partial---->
+@await Html.PartialAsync("components/contactinfo")
