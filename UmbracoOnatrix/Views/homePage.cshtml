@@ -71,29 +71,6 @@
 </section>
 
 
-<!----about-us
-  <section id="about-us-section" class="container page-section"> 
-    <div class="container-content">
-      <h3 class="section-title">@Model.Value("aboutSectionTitle")</h3>
-      <h2>@Model.Value("aboutHeadline")</h2>
-      <blockquote>@Model.Value("aboutQuote")</blockquote>
-      <p>@Model.Value("aboutText")</p>
-      <img src="@signatureImage" alt=""></img>
-      <p>@Model.Value("aboutSignature")</p>
-
-        <form method="get" novalidate>
-            <input type="text" id="name" name="name" placeholder="Name">
-            <input type="email" id="email" name="email" placeholder="Email address">
-            <input type="text" id="phone" name="phone" placeholder="Phone">
-            <select name="service" id="service">
-                <option value="1">Financial consulting</option>
-            </select>
-            <button class="btn btn-secondary" type="submit">Submit</button>
-        </form>
-    </div>  
-
-
-  </section>  --->
 
   <!----our-services--->
 @await Html.PartialAsync("components/services")
